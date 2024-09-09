@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Set the viewport to ensure the page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>Search Results</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section containing the logo and navigation -->
+    <header>
+        <!-- Logo of the marketplace -->
+        <div class="logo">Marketplace</div>
+        <!-- Navigation menu -->
+        <nav>
+            <a href="marketplace.html">Home</a>
+            <a href="#">Products</a>
+            <a href="#" id="accountButton">Account</a>
+            <button id="logoutButton">Logout</button>
+            <a href="#">Cart (<span id="cartItemCount">0</span>)</a>
+            <input type="text" class="search-bar" id="searchInput" placeholder="Search...">
+        </nav>
+    </header>
+    <!-- Main content section -->
+    <main>
+        <!-- Search results section -->
+        <section id="search-results" class="search-results">
+            <h2>Search Results</h2>
+            <div class="product-grid"></div>
+        </section>
+        <!-- Account information section, initially hidden -->
+        <section id="account-section" style="display: none;">
+            <h1>Account Information</h1>
+            <div>
+                <p><strong>Balance:</strong> $<span id="userBalance">0.00</span></p>
+                <h2>Shopping History</h2>
+                <ul id="shoppingHistory"></ul>
+                <h2>Search History</h2>
+                <ul id="searchHistory"></ul>
+            </div>
+        </section>
+    </main>
+    <!-- Footer section containing additional navigation links -->
+    <footer>
+        <nav>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </nav>
+    </footer>
+    <!-- Link to the external JavaScript file for dynamic content handling -->
+    <script src="search-results.js"></script>
+</body>
+</html>

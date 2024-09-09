@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8" />
+    <!-- Set the viewport to ensure the page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the page -->
+    <title>Create Account</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Create Account</h2>
+      <!-- Account creation form -->
+      <form id="createAccountForm">
+        <!-- Username input field -->
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <!-- Password input field -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <!-- Role selection dropdown -->
+        <div class="form-group">
+          <label for="role">Role:</label>
+          <select id="role" name="role" required>
+            <option value="merchant">Merchant</option>
+            <option value="supplier">Supplier</option>
+            <option value="shopper">Shopper</option>
+          </select>
+        </div>
+        <!-- Submit button for the account creation form -->
+        <button type="submit">Create Account</button>
+      </form>
+    </div>
+    <!-- Link to the external JavaScript file for form handling -->
+    <script src="createaccount.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Merchant Dashboard</h1>
+
+    <!-- Add Product Section -->
+    <div id="addProductContainer">
+        <h2>Add Product</h2>
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="text" id="productDescription" placeholder="Product Description" required>
+        <input type="number" id="productPrice" placeholder="Product Price" required>
+        <input type="number" id="productStock" placeholder="Stock" required>
+        <input type="text" id="productImageUrl" placeholder="Image URL" required>
+        <button id="addProductButton">Add Product</button>
+    </div>
+
+    <!-- Request Supply Section -->
+    <div id="requestSupplyContainer">
+        <h2>Request Supply</h2>
+        <input type="number" id="productIdToRequest" placeholder="Product ID" required>
+        <input type="number" id="quantityToRequest" placeholder="Quantity" required>
+        <button id="requestSupplyButton">Request Supply</button>
+    </div>
+
+    <!-- Received Supplies Section -->
+    <button id="showReceivedSuppliesButton">Show Received Supplies</button>
+    <div id="receivedSuppliesList" style="display:none;"></div>
+
+    <!-- List All Products Section -->
+    <button id="listAllProductsButton">List All Products</button>
+    <div id="productList" style="display:none;"></div>
+
+    <!-- Send Merchandise Section -->
+    <div id="sendMerchandiseContainer">
+        <h2>Send Merchandise</h2>
+        <input type="number" id="customerId" placeholder="Customer ID" required>
+        <input type="number" id="productIdToSend" placeholder="Product ID" required>
+        <input type="number" id="quantityToSend" placeholder="Quantity" required>
+        <button id="sendMerchandiseButton">Send Merchandise</button>
+    </div>
+
+    <!-- Orders Section -->
+    <button id="showOrdersButton">Show Orders</button>
+    <div id="ordersList" style="display:none;"></div>
+
+    <!-- Notifications Section -->
+    <div id="notificationsList"></div>
+
+    <!-- Chat Section -->
+    <div id="chatContainer">
+        <h2>Chat with Shoppers and Suppliers</h2>
+        <ul id="chatList"></ul>
+        <input type="text" id="chatInput" placeholder="Type your message here">
+        <button id="chatSendButton">Send</button>
+    </div>
+
+    <!-- Toggle Supply Requests -->
+    <button id="toggleSupplyRequestsButton">Show Supply Requests</button>
+    <div id="supplyRequestsContainer" style="display:none;">
+        <h2>Supply Requests</h2>
+        <ul id="supplyRequestsList"></ul>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button id="homeButton">Home</button>
+    <button id="accountButton">Account</button>
+    <button id="logoutButton">Logout</button>
+
+    <!-- Account Section -->
+    <section id="merchant-account-section" style="display: none;">
+        <h1>Merchant Account Information</h1>
+        <div>
+            <p><strong>Username:</strong> <span id="merchantUsername">Loading...</span></p>
+            <p><strong>Balance:</strong> $<span id="merchantBalance">0.00</span></p>
+            <h2>Product Listings</h2>
+            <ul id="merchantProductListings"></ul>
+            <h2>Order History</h2>
+            <ul id="merchantOrderHistory"></ul>
+        </div>
+    </section>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="merchant.js"></script>
+</body>
+</html>

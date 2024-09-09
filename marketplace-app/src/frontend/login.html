@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8" />
+    <!-- Set the viewport to ensure the page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the page -->
+    <title>Login</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <!-- Login form -->
+      <form id="loginForm">
+        <!-- Username input field -->
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <!-- Password input field -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <!-- Submit button for the login form -->
+        <button type="submit">Login</button>
+      </form>
+      <!-- Button to create a new account -->
+      <button id="createAccountBtn">Create Account</button>
+    </div>
+    <!-- Link to the external JavaScript file for form handling -->
+    <script src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Shopper Dashboard</h1>
+
+    <!-- Add Funds Section -->
+    <div id="addFundsContainer">
+        <h2>Add Funds</h2>
+        <input type="number" id="fundsAmount" placeholder="Enter amount" required>
+        <button id="addFundsButton">Add Funds</button>
+    </div>
+
+    <!-- Return Merchandise Section -->
+    <div id="returnMerchandiseContainer">
+        <h2>Return Merchandise</h2>
+        <input type="number" id="productId" placeholder="Product ID" required>
+        <input type="number" id="returnQuantity" placeholder="Quantity" required>
+        <button id="returnMerchandiseButton">Return Merchandise</button>
+    </div>
+
+    <!-- Shopping Cart Button -->
+    <button id="shoppingCartButton">View Cart</button>
+    
+    <!-- Inventory Button -->
+    <button id="inventoryButton">View Inventory</button>
+
+    <!-- Shop Button -->
+    <button id="shopButton">Shop</button>
+    <button id="logoutButton">Logout</button>
+
+    <!-- Container to display cart items -->
+    <div id="cartItemsContainer" style="display:none;">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItemsList"></ul>
+        <p id="totalCost">Total: $0.00</p>
+    </div>
+
+    <!-- Container to display inventory items -->
+    <div id="inventoryContainer" style="display:none;">
+        <h2>Inventory</h2>
+        <ul id="inventoryItemsList"></ul>
+    </div>
+ 
+    <!-- Chat Section -->
+    <div id="chatContainer">
+        <h2>Chat with Merchants and Suppliers</h2>
+        <ul id="chatList"></ul>
+        <input type="text" id="chatInput" placeholder="Type your message here">
+        <button id="chatSendButton">Send</button>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="shopper.js"></script>
+</body>
+</html>

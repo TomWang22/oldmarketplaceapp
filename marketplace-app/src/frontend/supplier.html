@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Set the viewport to ensure the page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>Supplier Dashboard</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section containing the logo and navigation buttons -->
+    <header>
+        <div class="logo">Supplier Dashboard</div>
+        <button id="accountButton">Account</button>
+        <button id="logoutButton">Logout</button>
+    </header>
+    <!-- Main content section -->
+    <main>
+        <!-- Section for sending supplies to merchants -->
+        <section id="send-supplies-section">
+            <form>
+                <input type="text" id="merchantId" placeholder="Merchant ID">
+                <input type="text" id="productIdToSupply" placeholder="Product ID">
+                <input type="number" id="quantityToSupply" placeholder="Quantity">
+                <button id="sendSuppliesButton" type="button">Send Supplies</button>
+            </form>
+        </section>
+
+        <!-- Section for adding new supplies -->
+        <section id="add-supplies-section">
+            <form>
+                <input type="text" id="supplyName" placeholder="Supply Name">
+                <input type="text" id="supplyDescription" placeholder="Supply Description">
+                <input type="number" id="supplyPrice" placeholder="Supply Price">
+                <input type="number" id="supplyCost" placeholder="Supply Cost">
+                <input type="number" id="supplyStock" placeholder="Supply Stock">
+                <input type="text" id="supplyImageUrl" placeholder="Supply Image URL">
+                <button id="addSupplyButton" type="button">Add Supply</button>
+            </form>
+        </section>
+
+        <!-- Section for adding supply quantity by ID -->
+        <section id="add-supplies-id-quantity-section">
+            <form>
+                <input type="text" id="supplyId" placeholder="Supply ID">
+                <input type="number" id="supplyQuantity" placeholder="Quantity">
+                <button id="addSupplyByIdButton" type="button">Add Supply by ID</button>
+            </form>
+        </section>
+
+        <!-- Section for viewing supply requests -->
+        <section id="view-requests-section">
+            <button id="viewRequestsButton">View Supply Requests</button>
+            <div id="supplyRequestsList" style="display:none;"></div>
+        </section>
+
+        <!-- Section for listing all supplies -->
+        <section id="list-supplies-section">
+            <button id="listSuppliesButton">List Supplies</button>
+            <div id="suppliesList" style="display:none;"></div>
+        </section>
+
+        <!-- Account information section, initially hidden -->
+        <section id="supplier-account-section" style="display: none;">
+            <h1>Supplier Account Information</h1>
+            <div>
+                <p><strong>Balance:</strong> $<span id="supplierBalance">0.00</span></p>
+                <!-- Add any other account details you want to display here -->
+            </div>
+        </section>
+
+        <!-- Chat section for communicating with merchants and shoppers -->
+        <div id="chatContainer">
+            <h2>Chat with Merchants and Shoppers</h2>
+            <ul id="chatList"></ul>
+            <input type="text" id="chatInput" placeholder="Type your message here">
+            <button id="chatSendButton">Send</button>
+        </div>
+
+        <!-- Notifications section -->
+        <section id="notifications-section">
+            <ul id="notificationsList"></ul>
+        </section>
+    </main>
+    <!-- Footer section containing additional navigation links -->
+    <footer>
+        <nav>
+            <a href="marketplace.html">Home</a>
+            <a href="#">Contact</a>
+        </nav>
+    </footer>
+    <!-- Link to the external JavaScript libraries and scripts for dynamic content handling -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="supplier.js"></script>
+</body>
+</html>

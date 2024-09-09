@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Set the viewport to ensure the page is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>Marketplace</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section containing the logo and navigation -->
+    <header>
+        <!-- Logo of the marketplace -->
+        <div class="logo">Marketplace</div>
+        <!-- Navigation menu -->
+        <nav>
+            <a href="#" id="homeButton">Home</a>
+            <a href="#" id="accountButton">Account</a>
+            <a href="shopping-cart.html">Cart (<span id="cartItemCount">0</span>)</a>
+            <input type="text" class="search-bar" placeholder="Search...">
+        </nav>
+    </header>
+    <!-- Main content section -->
+    <main>
+        <!-- Marketplace Section -->
+        <section id="marketplace-section">
+            <section id="filters">
+                <!-- Price filter dropdown -->
+                <label for="priceFilter">Filter by price:</label>
+                <select id="priceFilter">
+                    <option value="all">All</option>
+                    <option value="0-50">$0 - $50</option>
+                    <option value="51-100">$51 - $100</option>
+                    <option value="101-200">$101 - $200</option>
+                    <option value="200+">Above $200</option>
+                </select>
+
+                <!-- Items per page dropdown -->
+                <label for="itemsPerPage">Items per page:</label>
+                <select id="itemsPerPage">
+                    <option value="24">24</option>
+                    <option value="48">48</option>
+                    <option value="72">72</option>
+                </select>
+            </section>
+            <section id="product-listings" class="product-listings">
+                <div class="product-grid"></div>
+            </section>
+            <section id="pagination">
+                <button id="prevPage">Previous</button>
+                <span id="pageIndicator"></span>
+                <button id="nextPage">Next</button>
+            </section>
+        </section>
+
+        <!-- Account Section -->
+        <section id="account-section" style="display: none;">
+            <h1>Account Information</h1>
+            <div>
+                <p><strong>Balance:</strong> $<span id="userBalance">0.00</span></p>
+                <h2>Shopping History</h2>
+                <ul id="shoppingHistory"></ul>
+                <h2>Search History</h2>
+                <ul id="searchHistory"></ul>
+            </div>
+        </section>
+    </main>
+    <!-- Footer section containing additional navigation links -->
+    <footer>
+        <nav>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </nav>
+    </footer>
+    <!-- Link to the external JavaScript file for additional functionality -->
+    <script src="marketplace.js"></script>
+</body>
+</html>

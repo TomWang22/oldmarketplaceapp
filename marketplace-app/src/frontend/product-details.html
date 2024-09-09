@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Marketplace</div>
+      <nav>
+        <a href="marketplace.html">Home</a>
+        <a href="shopping-cart.html"
+          >Cart (<span id="cartItemCount">0</span>)</a
+        >
+        <button id="logoutButton">Logout</button>
+      </nav>
+    </header>
+    <main>
+      <section id="product-details" class="product-details">
+        <h1 id="product-name">Product Name</h1>
+        <p id="product-description">Product description goes here.</p>
+        <p id="product-price">$0.00</p>
+        <p id="product-quantity">In Stock: 0</p>
+        <img id="product-image" src="" alt="Product Image" />
+      </section>
+      <section id="product-specifications" class="product-specifications">
+        <h2>Specifications</h2>
+        <ul id="specifications-list" class="no-bullets"></ul>
+      </section>
+      <section id="product-reviews" class="product-reviews">
+        <h2>Reviews</h2>
+        <div id="reviews-summary">
+          <p id="average-rating">Average Rating: N/A</p>
+          <p id="total-reviews">Total Reviews: 0</p>
+        </div>
+        <div id="reviews-list"></div>
+        <form id="review-form">
+          <h3>Leave a Review</h3>
+          <label for="review-username">Name:</label>
+          <input type="text" id="review-username" required />
+          <label for="review-text">Review:</label>
+          <textarea id="review-text" required></textarea>
+          <label for="review-rating">Rating:</label>
+          <select id="review-rating" required>
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+          </select>
+          <button type="submit">Submit Review</button>
+        </form>
+        <div id="reviewMessage"></div>
+      </section>
+      <section id="related-products" class="related-products">
+        <h2>Related Products</h2>
+        <div id="related-products-list"></div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </footer>
+    <script src="product-details.js"></script>
+  </body>
+</html>
